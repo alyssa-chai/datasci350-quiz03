@@ -154,3 +154,42 @@ The `finish_reason` was `length`, so `json.loads()` received incomplete JSON and
 git add ollama/ commands.txt
 git commit -m "Add Python calls"
 git push
+git status
+git push
+git push
+(didn't work the first two times, github error?)
+
+Activity 3
+9.
+
+10.
+chmod 400 ~/Downloads/datasci350-quiz03.pem
+ssh -i ~/Downloads/datasci350-quiz03.pem ubuntu@ec2-3-135-233-238.us-east-2.compute.amazonaws.com
+ubuntu@ip-172-31-26-250:~$
+
+11. 
+sudo apt update
+sudo apt install python3-pandas python3-matplotlib python3-seaborn
+
+12.
+scp -i ~/Downloads/datasci350-quiz03.pem aws/traffic_analysis.py aws/website_traffic.txt ubuntu@ec2-3-135-233-238.compute.amazonaws.com:~
+scp -i /Users/stwbrshk/Downloads/datasci350-quiz03.pem aws/traffic_analysis.py aws/website_traffic.txt ubuntu@ec2-3-135-233-238.us-east-2.compute.amazonaws.com:~
+
+13.
+python3 traffic_analysis.py > results.txt
+cat /var/lib/cloud/data/instance-id >> results.txt
+cat results.txt
+sha256sum results.txt > fingerprint.txt
+cat fingerprint.txt
+
+14.
+scp -i /Users/stwbrshk/Downloads/datasci350-quiz03.pem ubuntu@ec2-3-135-233-238.us-east-2.compute.amazonaws.com:~/results.txt aws/
+scp -i /Users/stwbrshk/Downloads/datasci350-quiz03.pem ubuntu@ec2-3-135-233-238.us-east-2.compute.amazonaws.com:~/fingerprint.txt aws/
+scp -i /Users/stwbrshk/Downloads/datasci350-quiz03.pem ubuntu@ec2-3-135-233-238.us-east-2.compute.amazonaws.com:~/traffic_analysis.png aws/
+
+15. 
+When an EC2 instance is stopped, I no longer pay for compute time, but I still pay for storage such as the attached EBS volume.
+git add .
+git status
+git commit -m "Add AWS analysis results"
+git push
