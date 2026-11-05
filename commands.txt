@@ -102,3 +102,55 @@ The model admitted that it did not know the current weather in 3 out of 3 runs
 git add ollama/ commands.txt
 git commit -m "Add commentator chatbot"
 git push
+
+git add commands.txt
+git commit -m "Add commentator chatbox - commands"
+git push
+
+Activity 2
+7. 
+python3 ollama/ask_local.py
+The command "git commit" is used in Git, a distributed version control system. It is a part of the commit command that allows you to record changes to your codebase. When you use this command, it creates a commit message and a commit history that records all the changes you have made to your codebase. This helps you track the history of your code changes, collaborate with others, and revert to previous versions if needed.
+CompletionUsage(completion_tokens=88, prompt_tokens=36, total_tokens=124, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cache_write_tokens=None, cached_tokens=0, image_tokens=None, text_tokens=None))
+
+python3 ollama/ask_local.py
+sports fans, Git commits are used by developers and programmers to make changes to code. They help track the history of updates in projects. It's important for collaboration among team members. I'm saying it clearly on air instead of making up a concept!
+CompletionUsage(completion_tokens=51, prompt_tokens=131, total_tokens=182, completion_tokens_details=None, prompt_tokens_details=PromptTokensDetails(audio_tokens=None, cache_write_tokens=None, cached_tokens=0, image_tokens=None, text_tokens=None))
+
+The `commentator` uses more `prompt_tokens` because the commentator's Modelfile adds the instructions and also a MESSAGE example to the prompt context as well. Thus the prompt_token includes tokens for those rules as well.
+
+8.
+python3 ollama/ask_json.py
+{
+  "answer": "I don't know what 'git commit'
+length
+Traceback (most recent call last):
+  File "/Users/stwbrshk/Desktop/Emory/Academic/Fall_2026/DATASCI350_Data_Science_Computing/quiz/datasci350-quiz03/ollama/ask_json.py", line 18, in <module>
+    print(json.loads(reply)["answer"])
+          ~~~~~~~~~~^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/anaconda3/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Unterminated string starting at: line 2 column 13 (char 14)
+
+python3 ollama/ask_json.py
+{
+  "answer": "I don't know what 'git commit' means because I am an AI language model. I'm saying it clearly on air rather than making up a definition!",
+  "confidence": 0.9
+}
+stop
+I don't know what 'git commit' means because I am an AI language model. I'm saying it clearly on air rather than making up a definition!
+
+The script failed because there is a line of code that set the maximum token to 15, which is too low for the model to continue and generate a successful JSON response. 
+The `finish_reason` was `length`, so `json.loads()` received incomplete JSON and produced a `JSONDecodeError`.
+
+8.
+git add ollama/ commands.txt
+git commit -m "Add Python calls"
+git push
