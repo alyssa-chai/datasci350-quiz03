@@ -193,3 +193,11 @@ git add .
 git status
 git commit -m "Add AWS analysis results"
 git push
+
+AI use:
+I used ChatGPT for Activities 3 to help me understand the instructions, explain commands and code, troubleshoot errors.
+
+Example prompt:
+"Why is this not working scp -i ~/Downloads/datasci350-quiz03.pem aws/traffic_analysis.py aws/website_traffic.txt ubuntu@ec2-3-135-233-238.compute.amazonaws.com:~"
+
+No AI agent ran commands for me. I typed and ran all commands myself.
